@@ -1,0 +1,37 @@
+package org.system;
+
+public class Computer {
+	
+	public void computerModel() 
+	{
+		System.out.println("Model: ASUS TUF Gaming A15 FA506IH_FA506IH");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+
+
+-----------------------------------------------------------------------------------
+
+package org.system;
+
+public class Desktop extends Computer {
+
+	public void desktopSize()
+	{
+		System.out.println("Desktop size: 16.10 inches");
+
+	}
+	public static void main(String[] args) {
+		Desktop cmp=new Desktop();
+		cmp.computerModel();
+		cmp.desktopSize();
+	
+	}
+
+}
