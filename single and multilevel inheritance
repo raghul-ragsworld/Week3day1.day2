@@ -1,0 +1,26 @@
+A flow chart to show the single level and miltilevel inheritence in Selenium. (That which was discussed in the class)
+**Mention Keyword 
+
+
+
+In Selenium
+
+Single level inheritance is 
+
+RemoteWebDriver
+      |
+      |
+      |
+ChromiumDriver
+
+Single Inheritance
+
+
+
+Multilevel Inheritance 
+ChromiumDriver---------------EdgeDriver 
+  |           
+  |
+  |
+  |
+  ChromeDriver 
