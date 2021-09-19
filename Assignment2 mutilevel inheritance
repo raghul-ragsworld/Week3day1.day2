@@ -1,0 +1,77 @@
+package org.college;
+
+public class College {
+	
+	public void collegeName()
+	{
+		System.out.println("sree muthukumaraswamy college");
+	}
+	public void collegeCode()
+	{
+		System.out.println("RKG129");
+	}
+	public void collegeRank()
+	{
+		System.out.println("Collage rank: 2");
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+-------------------------------------------------------------------------------------
+
+package org.department;
+
+import org.college.College;
+
+public class Department extends College {
+	
+	public void deptName()
+	{
+		System.out.println("Department: Information Technology");
+	}
+
+	public static void main(String[] args) {
+	
+		
+	}
+
+}
+
+------------------------------------------------------------------------------------
+package org.student;
+
+import org.department.Department;
+
+public class Student extends Department {
+	
+	public void studentName()
+	{
+		System.out.println("Student Name: Raghul");
+	}
+	
+	public void studentDep() {
+		System.out.println("Student dept: Computer");
+	}
+	public void StudentId()
+	{
+		System.out.println("Student id: rl1104457");
+	}
+
+	public static void main(String[] args) {
+		Student studentinfo=new Student();
+		
+		studentinfo.collegeName();
+		studentinfo.collegeCode();
+		studentinfo.collegeRank();
+		studentinfo.deptName();
+		studentinfo.StudentId();
+		studentinfo.studentName();
+		studentinfo.studentDep();
+	}
+
+}
+
