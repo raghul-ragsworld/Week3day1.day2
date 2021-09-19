@@ -39,7 +39,7 @@ public void deposit() {
 
 		AxisBank axis = new AxisBank();
 
-		axis.deposit();
+		axis.deposit();// meothd overriding
 
 	}
 
