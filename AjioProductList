@@ -1,0 +1,45 @@
+package week3.day2;
+
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class AjioAssigment {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.get("https://www.ajio.com/");
+		WebElement search=driver.findElement(By.name("searchVal"));
+		search.sendKeys("Bags",Keys.ENTER);
+		driver.findElement(By.xpath("//label[@class='facet-linkname facet-linkname-genderfilter facet-linkname-Men']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//label[@class='facet-linkname facet-linkname-l1l3nestedcategory facet-linkname-Men - Fashion Bags']")).click();
+		//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[@class='brand']
+		List<WebElement> brand=driver.findElements(By.xpath("//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[@class='brand']"));
+		Thread.sleep(20000);
+		int size=brand.size();
+		System.out.println("Total No of results found: "+size);
+//		for(int i=0;i<size;i++)
+//		{
+//			String brandlist=brand.get(i).getText();
+//			System.out.println(brandlist);
+//		}
+		
+		for(WebElement listbrand:brand)
+		{
+			System.out.println("Brand Name: "+listbrand.getText());
+			
+		}
+	}
+
+}
