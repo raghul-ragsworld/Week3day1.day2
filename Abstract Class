@@ -1,0 +1,50 @@
+package week3.day2;
+
+public interface HardWare {
+	
+	public void hardwareResources();
+	
+	//this is harware resources
+	
+
+}
+-------------------------------------------------------
+
+package week3.day2;
+
+public interface Software {
+	
+	public void software();
+	
+	//this is software resource
+
+}
+
+-------------------------------------------------------------------
+
+
+
+package week3.day2;
+
+public class Desktop implements Software,HardWare {
+	
+	public void hardwareResources() {
+		System.out.println("This is HardWare Resources");
+	}
+
+	public void software() {
+		System.out.println("This is software");
+	}
+	public void desktopModel()
+	{
+		System.out.println("The above two creates desktop model");
+	}
+	public static void main(String[] args) {
+		
+	Desktop desk=new Desktop();
+	desk.hardwareResources();
+	desk.software();
+	desk.desktopModel();
+
+	}
+}
